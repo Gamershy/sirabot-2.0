@@ -25,9 +25,10 @@ for setting up the application data.
   the bot's life. Can be reloaded by anyone with a high enough permission
   level using the command `/reload-config`.
 - `/initialisers` - All files placed in here will be loaded in alphabetical
-  order. These files will each export an asynchronous function that will be
-  executed, with the bot itself only being allowed to start once all of them
-  have finished.
+  order. These files will each export a promise that will be evaluated, with
+  the bot itself only being allowed to start once all of them have finished.
+  The best way to create a promise is by defining and running an
+  [asynchronuos function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function).
 
 ### Command data: `/commands`
 The command data directory will contain a list of subdirectories, each one
