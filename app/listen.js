@@ -1,21 +1,13 @@
-const {
-  Client,
-  Constants
-} = require("discord.js");
+const Configuration = require("./initialisers/config");
+const Discord = require("discord.js");
+const FileHound = require("filehound");
+const Path = require("path");
+const { WSEvents } = Discord.Constants;
 
-const {
-  Status,
-  WSEvents
-} = Constants;
-
-const Bot = new Client({
+const Bot = new Discord.Client({
   fetchAllMembers: true,
   disabledEvents: [ WSEvents.TYPING_START ]
 });
-
-const Configuration = require("./initialisers/config");
-const FileHound = require("filehound");
-const Path = require("path");
 
 async function listen() {
   if (Bot.status === Status.READY) {
