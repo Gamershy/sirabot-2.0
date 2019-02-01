@@ -17,6 +17,8 @@ async function listen() {
     .path(Path.resolve(__dirname, "listeners"))
     .match("*.listener.js");
 
+  fileHound.find();
+
   return new Promise((resolve, reject) => {
     fileHound.on("match", function(file) {
       let event = Path.basename(file, ".listener.js");
