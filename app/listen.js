@@ -10,10 +10,6 @@ const Bot = new Discord.Client({
 });
 
 async function listen() {
-  if (Bot.status === Status.READY) {
-    await Bot.destroy();
-  }
-
   let { Discord: DiscordConfig } = await Configuration;
   let { TOKEN } = DiscordConfig;
 
