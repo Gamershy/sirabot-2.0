@@ -62,3 +62,7 @@ typings/
 
 # next.js build output
 .next
+
+# bot configuration files
+!app/config/.gitkeep
+app/config
