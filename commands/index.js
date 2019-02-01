@@ -14,7 +14,7 @@ async function loader() {
 
   // Use a promise to allow us to ensure all commands are loaded before starting
   // the bot.
-  let promise = new Promise(resolve => {
+  let promise = new Promise((resolve, reject) => {
     fileHound.on("match", function(file) {
       let data = require(file);
       let category = path.basename(path.dirname(file));
@@ -89,6 +89,8 @@ async function loader() {
       // Resolve with the full set of loaded commands
       resolve(commands);
     });
+
+    fileHound.on("error", reject);
   });
 
   fileHound.path(__dirname);
