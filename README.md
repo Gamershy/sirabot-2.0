@@ -54,6 +54,14 @@ snake-case (`command-name`) when being read into the bot's command registry.
 Commands will be managed using `/manage-command`, with command names being
 provided in their snake-case form when referenced in the command.
 
+`main` specifies the function that is executed when the command is called. It is
+given the message that triggered the command, as well as an array that contains
+the message contents split by the U+0020 SPACE character ("` `"). This function
+should return a boolean value, or an instance of the `Error` class - or any
+subclass thereof. It **should never** `throw` an error as this will trigger a
+Promise rejection, which are handled differently to the function exiting
+normally.
+
 `permission` determines what permission level is required to execute a
 command. If not provided it will default to `1`, meaning that everyone can
 execute it.
