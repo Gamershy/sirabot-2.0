@@ -72,4 +72,4 @@ above name conversion rules.
 
 If `enabled` is provided it will determine whether the bot will read the
 command into memory: `true` make the bot load it, and `false` will not. The
-field will default to `true` when not provided.
+field will default to `false` when not provided.

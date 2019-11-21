@@ -56,8 +56,8 @@ async function loader() {
       // Also, transform them to their slug-case names
       names = Array.from(new Set(names), name => toSlug(name));
 
-      // If this command is disabled explicitly, don't load it into memory.
-      if ("enabled" in data && !data.enabled) {
+      // If this command is not marked as enabled, don't load it into memory.
+      if (!data.enabled) {
         return;
       }
 
