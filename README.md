@@ -50,9 +50,9 @@ and will ideally export an object with the following signature:
 
 Each command will be named based on the first portion of its filename, with
 the command name being transformed from camelCase (`commandName`) to
-kebab-case (`command-name`) when being read into the bot's command registry.
+snake-case (`command-name`) when being read into the bot's command registry.
 Commands will be managed using `/manage-command`, with command names being
-provided in their kebab-case form when referenced in the command.
+provided in their snake-case form when referenced in the command.
 
 `permission` determines what permission level is required to execute a
 command. If not provided it will default to `1`, meaning that everyone can
