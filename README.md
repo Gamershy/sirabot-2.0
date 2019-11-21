@@ -40,7 +40,7 @@ Command files placed in these subfolders will follow the naming convention of
 ```
 
 and will ideally export an object with the following signature:
-- main: `AsyncFunction`(`Discord.Message`, `string[]`) => `boolean|Error`
+- main: `AsyncFunction(Discord.Message, string[]) => boolean|Error`
 - permission: `number?`
 - documentation: `Object?`
   - description: `string`
