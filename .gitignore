@@ -42,6 +42,9 @@ typings/
 # JetBrains project configuration
 .idea/
 
+# Visual Studio Code project configuration
+.vscode/
+
 # Optional npm cache directory
 .npm
 
