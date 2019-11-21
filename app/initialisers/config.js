@@ -1,4 +1,4 @@
-const FS = require("fs").promises;
+const { promises: FS } = require("fs");
 const Toml = require("toml");
 
 async function config() {
