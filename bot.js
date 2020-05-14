@@ -1,8 +1,8 @@
 const Commands = require("./commands");
-const Initialisers = require("./app/initialisers");
+const Initializers = require("./app/initializers");
 const Listeners = require("./app/listen");
 
-Initialisers
+Initializers
   .then(Commands.loader)
   .then(Listeners.listen)
   .catch(error => {

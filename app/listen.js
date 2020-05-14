@@ -1,4 +1,4 @@
-const Configuration = require("./initialisers/config");
+const Configuration = require("./initializers/config");
 const Discord = require("discord.js");
 const FileHound = require("filehound");
 const Path = require("path");

@@ -2,10 +2,10 @@ const FileHound = require("filehound");
 const path = require("path");
 
 module.exports = FileHound.create()
-  .path(path.join(__dirname, "initialisers"))
+  .path(path.join(__dirname, "initializers"))
   .ext("js")
   .depth(2)
   .find()
-  .then(function(initialisers) {
-    return Promise.all(initialisers.map(file => require(file)));
+  .then(function(initializers) {
+    return Promise.all(initializers.map(file => require(file)));
   });
