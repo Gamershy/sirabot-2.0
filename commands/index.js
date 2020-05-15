@@ -15,6 +15,8 @@ async function loader() {
   // Use a promise to allow us to ensure all commands are loaded before starting
   // the bot.
   let promise = new Promise((resolve, reject) => {
+    console.group("Loading commands...");
+
     fileHound.on("match", function(file) {
       let data = require(file);
       let category = path.basename(path.dirname(file));
@@ -58,6 +60,8 @@ async function loader() {
 
       // If this command is not marked as enabled, don't load it into memory.
       if (!data.enabled) {
+        console.log(`Skipping disabled command "${category}/${names[0]}"`);
+
         return;
       }
 
@@ -83,9 +87,17 @@ async function loader() {
           commands.set(name, command);
         }
       }
+
+      console.log(`Loaded command "${category}/${names[0]}"`);
+
+      if (names.length > 1) {
+        console.log(`  with alias(es) "${names.slice(1).join('", "')}"`);
+      }
     });
 
     fileHound.on("end", function() {
+      console.groupEnd(); // Loading commands...
+
       // Resolve with the full set of loaded commands
       resolve(commands);
     });
