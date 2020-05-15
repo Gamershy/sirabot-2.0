@@ -110,7 +110,7 @@ async function loader() {
   fileHound.match("*.command.js");
   fileHound.depth(1);
 
-  // noinspection JSIgnoredPromiseFromCall
+  // noinspection JSIgnoredPromiseFromCall,ES6MissingAwait
   fileHound.find();
 
   return promise;
