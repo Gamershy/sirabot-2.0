@@ -22,13 +22,15 @@
   "homepage": "https://github.com/Gamershy/sirabot-2.0#readme",
   "private": true,
   "dependencies": {
-    "discord.js": "^11.4.2",
+    "discord.js": "^12.2.0",
     "erlpack": "github:discordapp/erlpack",
     "fawn": "^2.1.5",
     "filehound": "^1.16.7",
     "mongoose": "^5.4.6",
     "to-case": "^2.0.0",
-    "toml": "^3.0.0",
-    "uws": "^9.14.0"
+    "toml": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.1"
   }
 }
