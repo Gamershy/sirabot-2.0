@@ -1,4 +1,5 @@
 const FileHound = require("filehound");
+const Permissions = require("../app/config/permissions");
 const path = require("path");
 
 const {
@@ -28,7 +29,7 @@ async function loader() {
       }
 
       if (!"permission" in data || !(Number.isSafeInteger(+data.permission) && +data.permission > 0)) {
-        data.permission = 0b1; // TODO: Replace with Permissions.USER later
+        data.permission = Permissions.USER;
       }
 
       if ("documentation" in data) {
