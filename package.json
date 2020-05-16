@@ -1,36 +1,36 @@
 {
-  "name": "sirabot-2.0",
-  "version": "0.0.0",
-  "description": "A full rewrite of the Anything NSFW Discord server bot \"Sirabot\"",
-  "main": "bot.js",
-  "scripts": {
-    "start": "node ./bot.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Gamershy/sirabot-2.0.git"
-  },
-  "author": "Gamershy Yellowstar",
-  "contributors": [
-    "Zuris <jamie.ridding@icloud.com> (http://zuris.uk/)"
-  ],
-  "license": "UNLICENSED",
-  "bugs": {
-    "url": "https://github.com/Gamershy/sirabot-2.0/issues"
-  },
-  "homepage": "https://github.com/Gamershy/sirabot-2.0#readme",
-  "private": true,
-  "dependencies": {
-    "discord.js": "^12.2.0",
-    "erlpack": "github:discordapp/erlpack",
-    "fawn": "^2.1.5",
-    "filehound": "^1.16.7",
-    "mongoose": "^5.4.6",
-    "to-case": "^2.0.0",
-    "toml": "^3.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "^14.0.1"
-  }
+	"name": "sirabot-2.0",
+	"version": "0.0.0",
+	"description": "A full rewrite of the Anything NSFW Discord server bot \"Sirabot\"",
+	"main": "bot.js",
+	"scripts": {
+		"start": "node ./bot.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Gamershy/sirabot-2.0.git"
+	},
+	"author": "Gamershy Yellowstar",
+	"contributors": [
+		"Zuris <jamie.ridding@icloud.com> (http://zuris.uk/)"
+	],
+	"license": "UNLICENSED",
+	"bugs": {
+		"url": "https://github.com/Gamershy/sirabot-2.0/issues"
+	},
+	"homepage": "https://github.com/Gamershy/sirabot-2.0#readme",
+	"private": true,
+	"dependencies": {
+		"discord.js": "^12.2.0",
+		"erlpack": "github:discordapp/erlpack",
+		"fawn": "^2.1.5",
+		"filehound": "^1.16.7",
+		"mongoose": "^5.4.6",
+		"to-case": "^2.0.0",
+		"toml": "^3.0.0"
+	},
+	"devDependencies": {
+		"@types/node": "^14.0.1"
+	}
 }
