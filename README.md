@@ -24,11 +24,20 @@ the bot's application data.
 - `/config` - The configuration data used during initial start-up and during
   the bot's life. Can be reloaded by anyone with a high enough permission
   level using the command `/reload-config`.
+- `/constants` - Predefined constants to be used in place of "special" strings
+  in the application's source code. This directory contains frozen definitions
+  for these constants grouped by purpose, and associated type definitions to let
+  editors detect these values. Constant values **SHOULD** be placed in here,
+  instead of being used in their raw form.
+- `/helpers` - User-level helpers to reduce code duplication for repeated
+  actions. Grouped by helper purpose and then name.
 - `/initializers` - All files placed in here will be loaded in alphabetical
   order. These files will each export a promise that will be evaluated, with
   the bot itself only being allowed to start once all of them have finished.
   The best way to create a promise is by defining and running an
   [asynchronous function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function).
+- `/listeners` - <!-- TODO: Document /listeners directory -->
+- `/models` - <!-- TODO: Document /models directory -->
 
 ### Command data: `/commands`
 The command data directory will contain a list of subdirectories, each one
