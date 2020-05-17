@@ -16,10 +16,10 @@ program. Everything else will be located in a subfolder under this directory
 to make it easier to find and modify parts of the application.
 
 ### Application data: `/app`
-The application data will contain all of the bot's configuration and
-initializer files. These files contain the initial setup that the bot will go
-through every time it is started up, and the configuration that will be used
-for setting up the application data.
+The application data will contain all the bot's configuration and initializer
+files. These files contain the initial setup that the bot will go through every
+time it is started up, and the configuration that will be used for setting up
+the bot's application data.
 
 - `/config` - The configuration data used during initial start-up and during
   the bot's life. Can be reloaded by anyone with a high enough permission
@@ -63,8 +63,8 @@ Promise rejection, which are handled differently to the function exiting
 normally.
 
 `permission` determines what permission level is required to execute a
-command. If not provided it will default to `1`, meaning that everyone can
-execute it.
+command. If not provided it will default to `1`, meaning everyone can execute
+it.
 
 `aliases` is an array of strings in `commandName` format. If provided, the bot
 will parse these extra names and register the command to them, following the
