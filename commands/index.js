@@ -16,7 +16,7 @@ async function loader() {
 
 	// Use a promise to allow us to ensure all commands are loaded before starting
 	// the bot.
-	let promise = new Promise((resolve, reject) => {
+	let loadingCommands = new Promise((resolve, reject) => {
 		console.group("Loading commands...");
 
 		fileHound.on("match", function (file) {
@@ -112,7 +112,7 @@ async function loader() {
 	// noinspection JSIgnoredPromiseFromCall,ES6MissingAwait
 	fileHound.find();
 
-	return promise;
+	return loadingCommands;
 }
 
 async function loadSingle(command) {
