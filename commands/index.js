@@ -1,5 +1,6 @@
 const FileHound = require("filehound");
-const Permissions = require("../app/config/permissions");
+const ErrorCodes = require("../app/constants/error-codes");
+const Permissions = require("../app/constants/permissions");
 const path = require("path");
 
 const {
@@ -71,7 +72,7 @@ async function loader() {
 				};
 
 				if (commands.has(name)) {
-					commands.set(name, {error: "COMMAND_CONFLICT"}); // TODO: Replace with Errors.COMMAND_CONFLICT later
+					commands.set(name, {error: ErrorCodes.COMMAND_CONFLICT});
 				} else {
 					let command = {
 						main: data.main,
